@@ -33,6 +33,7 @@ namespace CadastroUsuario
         }
 
         public static void MostraMensagem(string mensagem)
+        // Mostra mensagem na tela e espera o usuário pressionar qualquer tecla para continuar
         {
             Console.WriteLine(mensagem);
             Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -40,6 +41,7 @@ namespace CadastroUsuario
             Console.Clear();
         }
         public static Resultado_e PegaString(ref string minhaString, string mensagem)
+        // Pega uma string do usuário e retorna o resultado da operação
         {
             Resultado_e retorno;
             Console.WriteLine(mensagem);
@@ -58,6 +60,7 @@ namespace CadastroUsuario
         }
 
         public static Resultado_e PegaData(ref DateTime minhaData, string mensagem)
+        // Pega uma data do usuário e retorna o resultado da operação
         {
             Resultado_e retorno;
             do
@@ -89,6 +92,7 @@ namespace CadastroUsuario
             return retorno;
         }
         public static Resultado_e PegaUInt32(ref UInt32 numeroUInt32, string mensagem)
+        // Pega um UInt32 do usuário e retorna o resultado da operação
         {
             Resultado_e retorno;
             do
@@ -121,6 +125,7 @@ namespace CadastroUsuario
         }
 
         public static Resultado_e CadastraUsuario(ref List<DadosCadastraisStruct> ListaDeUsuarios)
+        // Cadastra um usuário e retorna o resultado da operação
         {
             DadosCadastraisStruct cadastroUsuario;
             cadastroUsuario.Nome = "";
@@ -144,6 +149,7 @@ namespace CadastroUsuario
         }
 
         public static void GravaDados(string caminho, List<DadosCadastraisStruct> ListaDeUsuarios)
+        // Grava os dados em um arquivo
         {
             try
             {
@@ -167,6 +173,7 @@ namespace CadastroUsuario
         }
 
         public static void CarregaDados(string caminho, ref List<DadosCadastraisStruct> ListaDeUsuarios)
+        // Carrega os dados de um arquivo
         {
             try
             {
@@ -206,6 +213,7 @@ namespace CadastroUsuario
         }
 
         public static void BuscaUsuarioPeloDoc(List<DadosCadastraisStruct> ListaDeUsuarios)
+        // Busca um usuário pelo número do documento
         {
             Console.WriteLine("Digite o número do documento do usuário que deseja buscar:");
             string temp = Console.ReadLine();
@@ -235,6 +243,7 @@ namespace CadastroUsuario
         }
 
         public static void ExcluiUsuarioPeloDoc(ref List<DadosCadastraisStruct> ListaDeUsuarios)
+        // Exclui um usuário pelo número do documento
         {
             Console.WriteLine("Digite o número do documento do usuário que deseja excluir ou digite S para sair");
             string temp = Console.ReadLine();
