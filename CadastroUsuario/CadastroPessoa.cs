@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+
 
 namespace CadastroUsuario
 {
+    [DataContract]
     internal class CadastroPessoa
     {
+        [DataMember]
         private string nome;
+        [DataMember]
         private string cpf;
+        [DataMember]
         private string dataDeNascimento;
+        [DataMember]
         private string nomeDaRua;
+        [DataMember]
         private UInt32 numeroDaCasa;
 
         public string Nome

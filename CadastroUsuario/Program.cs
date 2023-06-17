@@ -11,7 +11,7 @@ namespace CadastroUsuario
     {
         static void Main(string[] args)
         {
-            BaseDeDados baseDeDados = new BaseDeDados();
+            BaseDeDados baseDeDados = new BaseDeDados("BaseDeDados.xml");
             InterfaceGrafica meuPrograma = new InterfaceGrafica(baseDeDados);
             meuPrograma.IniciaInterface();
         }
